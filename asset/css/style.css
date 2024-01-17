@@ -16,7 +16,7 @@ body {
     color: black;
     background-image: url(/asset/images/frame-ori-land-small-429x925.png);
     background-size: contain;
-    max-width: 380px;
+    max-width: 100%;
     text-align: center;
     object-fit: cover;
     margin: 0 auto;
@@ -31,7 +31,7 @@ h1 {
     text-transform: capitalize;
     min-height: 5rem;
     width: 24rem;
-    border-bottom: 1rem;
+    margin-bottom: 1rem;
     display: block;
     padding: 1rem;
 }
@@ -203,19 +203,66 @@ input[type="radio"]:checked + label {
     line-height: 0cm;
 }
 
-  /* Media query specially for the Galaxy Fold */
-/* @media only screen and (max-width:380) {
-    h1 {
-        width: 20rem !important;
-    }
-
-} */
-
-/* @media only screen and (orientation: portrait) and (max-width:430) {
+/* Removes the 'quiz' background 'wallpaper' for screens sizes below 768px */
+@media screen and (min-width: 768px) {
     body {
-        background-image: url(/asset/images/frame-ori-land-small-429x925.png) !important;
-        background-size: cover;
-        max-width: 500px;
-    }
+    background-image: url(/asset/images/background-50.png);
+}
 
-} */
+#container-div {
+    background-image: url(/asset/images/frame-ori-768x1024-new.png);
+    background-color: white;
+    max-width: 768px;
+    max-height: 1047px;
+    height:100%;
+    width:100%;
+}
+
+h1 {
+    font-size: 4rem;
+    min-width: 45rem;
+    width: auto;
+    padding: 2rem 5rem;
+    vertical-align:middle;
+}
+
+#q-heading, #q-counter {
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+#question {
+    font-size: 3rem;
+    line-height: 4.3rem;
+    width: 55rem;
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+
+/* Making the grey transparent screen bigger */
+#quiz-form {
+    margin: 1rem 3rem 3rem 3rem;
+    min-height: 50rem;
+}
+
+#radio-btns {
+    margin: 1ch 0;
+}
+
+Label {
+    font-size: 3.5rem;
+    width: auto;
+    margin: 1rem 0;
+}
+
+#btns {
+    margin: 2rem 0;
+}
+
+#submit-btn, #next-q, #play-again, #refresh {
+    font-size: 3rem;
+}
+
+
+
+}
