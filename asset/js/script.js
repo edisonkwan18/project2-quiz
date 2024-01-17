@@ -167,10 +167,10 @@ let quizData = [
     console.log("User answer: " + selectedOption);
   //Prevents user from selecting 'next question' and 'submit' buttons after the last question is displayed.
     if (quizData.length === 1) {
-      nextQButton.style.visibility = "hidden";
-      playAgainBtn.style.visibility = "visible"; // option to play game again
-      submitButton.style.visibility = "hidden";
-      quitGameBtn.style.visibility = "hidden"
+      nextQButton.style.display = "none";
+      playAgainBtn.style.display = "block"; // option to play game again
+      submitButton.style.display = "none";
+      quitGameBtn.style.display = "none"
     }
   
   //Will run if user chooses correct option and displays a 'tick' mark against the chosen answer
@@ -247,8 +247,8 @@ let quizData = [
     if (quizData.length === 1) {
       
     } else {
-      submitButton.style.visibility = "hidden";
-      nextQButton.style.visibility = "visible";
+      submitButton.style.display = "none";
+      nextQButton.style.display = "block";
     }
   }
   
@@ -256,8 +256,8 @@ let quizData = [
    * Prevents user jumping head to next question before submission. Hides 'next q' button and makes 'submit' button reappear.
    */
   function removeNextQBtn() {
-    nextQButton.style.visibility = "hidden";
-    submitButton.style.visibility = "visible";
+    nextQButton.style.display = "none";
+    submitButton.style.display = "block";
    }
   
   // option for playing game again after quiz is completed by the user
@@ -266,7 +266,7 @@ let quizData = [
   }
   
   /**
-   * option for qutting the game (depicted as a FontAwesome 'refresh' icon)
+   * option for quitting the game (depicted as a FontAwesome 'refresh' icon)
    */
   function quitGame() {
     location.reload(true); // page hard refresh
@@ -277,9 +277,9 @@ let quizData = [
   
   nextQButton.addEventListener("click", removeNextQBtn); //Triggers 'remove next q button' listener after user clicks on 'next question' button
   
-  quizForm.addEventListener("submit", getUserInput); // Triggers the 'user input' listener when user clicks on 'submit answer' button
+  submitButton.addEventListener("click", getUserInput); // Triggers the 'user input' listener when user clicks on 'submit answer' button
   
-  quizForm.addEventListener("submit", removeSubmitBtn); //Triggers 'remove submit button' listener after user clicks on the 'submit answer' button
+  submitButton.addEventListener("click", removeSubmitBtn); //Triggers 'remove submit button' listener after user clicks on the 'submit answer' button
   
   playAgainBtn.addEventListener("click", playAgain);//Triggers 'play again' listener
   
