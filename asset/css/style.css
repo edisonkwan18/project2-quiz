@@ -31,19 +31,13 @@ h1 {
     text-transform: capitalize;
     min-height: 5rem;
     width: 24rem;
-    /* display flex will make the text to align */
+    border-bottom: 1rem;
     display: block;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /*   Padding and margin   */
     padding: 1rem;
-    /* position: absolute;
-    top: 2rem; */
 }
 
 .em-font {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     font-weight: 700;
 }
 
@@ -71,7 +65,7 @@ h1 {
 }
 
 #q-container {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-size: 2rem;
 }
 
@@ -103,7 +97,7 @@ input {
 label {
     padding: 0.5rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     border: solid 0.5rem #FFA500;
     border-radius: 1rem;
@@ -114,14 +108,14 @@ label {
 }
 
 label:hover {
-    background-color: black;
+    background-color: #D80519;
     border-radius: 10px;
     color:white;
 }
 
 /* Create a 'sticky' on click effect when label is clicked */
 input[type="radio"]:checked + label {
-    background-color: black;
+    background-color: #D80519;
     border-radius: 10px;
     color:white;
   }
@@ -148,6 +142,11 @@ input[type="radio"]:checked + label {
     color: white;
 }
 
+#btns {
+    display: flex;
+    flex-direction: row;
+}
+
 #radio-btns {
     display:flex;
     flex-direction: column;
@@ -155,6 +154,7 @@ input[type="radio"]:checked + label {
     justify-content: space-around;
     padding:20px;
     height:200px;
+    margin: 2rem 0;
 }
 
 #submit-btn, #next-q, #play-again {
@@ -163,6 +163,7 @@ input[type="radio"]:checked + label {
     font-size: 1.5rem;
     border:black 0.5rem solid;
     background-color: white;
+    min-width: 15rem;
 }
 
 
@@ -172,9 +173,10 @@ input[type="radio"]:checked + label {
 }
 
 #response {
-    font-size: 1.4rem;
+    font-size: 3rem;
+    font-weight: 700;
     z-index:1;
-    padding: 1rem 0;
+    padding: 1.5rem;
     background-color: rgba(252, 252, 252, 0.5);
     min-width: 24rem;
     border-radius: 1rem;
@@ -186,6 +188,8 @@ input[type="radio"]:checked + label {
     border-radius: 10px;
     border: black 7px solid;
     background-color: white;
+    position: relative;
+    right: -1.5rem;
 }
 
 #quit-game:hover {
@@ -195,7 +199,8 @@ input[type="radio"]:checked + label {
 
 /* increases size of FontAwesome 'refresh' icon */
 #refresh {
-    font-size: 1.2em;
+    font-size: 1.5rem;
+    line-height: 0cm;
 }
 
   /* Media query specially for the Galaxy Fold */

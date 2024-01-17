@@ -211,7 +211,7 @@ let quizData = [
       nextQButton.style.display = "none";
       playAgainBtn.style.display = "block"; // option to play game again
       submitButton.style.display = "none";
-      quitGameBtn.style.display = "none"
+      quitGameBtn.style.display = "none";
     }
   
   //Will run if user chooses correct option and displays a 'tick' mark against the chosen answer
@@ -220,7 +220,7 @@ let quizData = [
         if (choices[x].checked) { // nested if condition for finding the 'checked' radio button
           let radioId = choices[x].id; // the selected radio button's id is used to identify the corresponding label tag (line 185 below)
           let theLabel = document.querySelector('label[for="' + radioId + '"]'); // 
-          theLabel.style.border = "solid 0.5rem #90EE90";
+          theLabel.style.border = "solid 0.5rem #39CF11";
         }
       }
       console.log("User inputted correct answer");
@@ -239,7 +239,7 @@ let quizData = [
   
     //Applies to both if conditions above (within the checkAnswer function) - displays the final score after the last question has been answered and checked for correct/incorrect response.
     if (quizData.length === 11) {
-      response.innerHTML = `Hey, ${username}! You Have Completed The Quiz!<strong> Final Score :<span class="em-font">${score}</span>`
+      response.innerHTML = `Congratulations, ${username}! Your Final Score is <span class="em-font">${score}</span>`
       document.getElementById("q-heading").innerHTML = "Quiz complete!"; //counter heading text changes to indicate end of game.
     }
   }
@@ -249,7 +249,7 @@ let quizData = [
    */
   function keepScore() {
     score++;
-    response.innerHTML = `Your current score is :<span class="em-font">${score}</span>`;
+    response.innerHTML = `Current score:<span class="em-font">${score}</span>`;
   }
   
   /**
