@@ -44,7 +44,7 @@ let quizData = [
   ];
   
   // Setup global variables
-  let question, i, userChoice, choices, y, correctAnswer, username;
+  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username;
   let counter = 1;
   let score = 0;
   
@@ -86,7 +86,7 @@ let quizData = [
     console.log(question.innerHTML);
     correctAnswer = quizData[i][1][0]; // Correct answer is stored here before it is randomised
     console.log(`Correct option is : ${correctAnswer}`); //
-  
+
     displayChoice(); // callback function for displaying choices.
   }
   
@@ -121,6 +121,8 @@ let quizData = [
     let a2 = document.getElementById("a2");
     let a3 = document.getElementById("a3");
     let a4 = document.getElementById("a4");
+
+    resetChoiceLabel(); // Overwrite the color of border
   
     // choices are displayed within the label tags (post shuffle)
     a1.innerHTML = quizData[i][1][0];
@@ -129,6 +131,13 @@ let quizData = [
     a4.innerHTML = quizData[i][1][3];
   }
   
+  function resetChoiceLabel(){
+    a1.style.border = "solid 0.5rem #FFA500";
+    a2.style.border = "solid 0.5rem #FFA500";
+    a3.style.border = "solid 0.5rem #FFA500";
+    a4.style.border = "solid 0.5rem #FFA500";
+  }
+
   /**
    * Event listener for retrieving user selected option and checks it against the correct answer. Is triggered when the form is submitted by clicking the 'submit answer' button
    */
@@ -146,7 +155,7 @@ let quizData = [
     ans2.value = quizData[i][1][1];
     ans3.value = quizData[i][1][2];
     ans4.value = quizData[i][1][3];
-  
+ 
     choices = document.getElementsByName("choice"); // retrives array of input tags by common 'name' attribute value 'choice'
     
     // for loop for checking each element in the array to find the user selected radio button.
@@ -157,9 +166,7 @@ let quizData = [
     }
     checkAnswer(userChoice); // call back function to capture 'userChoice' variable as a parameter for the 'checkAnswer' function
   }
-  
-  
-  
+      
   /**
    * Checks selected option against the correct answer and indicates correct/incorrect response
    */
@@ -181,6 +188,7 @@ let quizData = [
           let theLabel = document.querySelector('label[for="' + radioId + '"]'); // 
           theLabel.appendChild(tickIcon); // 'tick' mark displays against the respective label tag
           console.log(theLabel.innerHTML);
+          theLabel.style.border = "solid 0.5rem #90EE90";
         }
       }
       console.log("User inputted correct answer");
@@ -195,6 +203,7 @@ let quizData = [
           let theLabel = document.querySelector('label[for="' + radioId + '"]');
           theLabel.appendChild(xIcon);
           console.log(theLabel.innerHTML);
+          theLabel.style.border = "solid 0.5rem #DC143C";
         }
       }
     }
@@ -229,6 +238,7 @@ let quizData = [
     removeQuestion(); // removes answered question from array
     console.log(quizData);
     quizForm.reset(); // resets form to deselect the selected radio button from the previous question
+    resetChoiceLabel();
     askQuestion(); // asks the next question
     qCounter(); // increments quiz counter heading by 1
   }
