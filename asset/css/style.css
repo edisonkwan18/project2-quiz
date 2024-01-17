@@ -10,16 +10,16 @@
 
 body {
     display:flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     color: black;
-    /* z-index: -999; */
     background-image: url(/asset/images/frame-ori-land-small-429x925.png);
     background-size: contain;
     max-width: 380px;
-    align-items: center;
     text-align: center;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
 /* The style of the title and font */
@@ -32,14 +32,19 @@ h1 {
     min-height: 5rem;
     width: 24rem;
     /* display flex will make the text to align */
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /* flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     /*   Padding and margin   */
     padding: 1rem;
-    position: absolute;
-    top: 2rem;
+    /* position: absolute;
+    top: 2rem; */
+}
+
+.em-font {
+    font-size: 2.4rem;
+    font-weight: 700;
 }
 
 #container-div {
@@ -57,6 +62,7 @@ h1 {
     max-height: 1080px;
     height:100%;
     width:100%;
+
 }
 
 #q-heading, #q-counter {
@@ -172,6 +178,7 @@ input[type="radio"]:checked + label {
     background-color: rgba(252, 252, 252, 0.5);
     min-width: 24rem;
     border-radius: 1rem;
+    word-wrap: break-word;
 }
 
 #quit-game {

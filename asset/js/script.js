@@ -6,6 +6,46 @@ let quizData = [
       ["Uniform Resource Locator", "Universal Resource Locator", "Unified Resource Locator", "Unique Resource Locator"]
     ],
     [
+      "Which tag is used to create an unordered list in HTML?",
+      ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;dl&gt;"]
+    ],
+    [
+      "What does CSS stand for?",
+      ["Cascading Style Sheet", "Counter Style Sheet", "Computer Style Sheet", "Creative Style Sheet"]
+    ],
+    [
+      "In CSS, what property is used to set the background color of an element?",
+      ["background-color", "color", "text-color", "bgcolor"]
+    ],
+    [
+      "Which symbol is commonly used as a selector in CSS to target classes?",
+      ["&period;", "&dollar;", "&num;", "&commat;"]
+    ],
+    [
+      "What does the acronym DOM stand for in JavaScript?",
+      ["Document Object Model", "Data Object Model", "Dynamic Object Model", "Document Oriented Model"]
+    ],
+    [
+      "Which HTML tag is used to embed JavaScript code in an HTML document?",
+      ["&lt;script&gt;", "&lt;javascript&gt;", "&lt;code&gt;", "&lt;js&gt;"]
+    ],
+    [
+      "What is the purpose of the CSS property 'flex'?",
+      ["To create a flexible box layout", "To make an element vertically centered", "To increase the font size of an element", "To change the text color of an element"]
+    ],
+    [
+      "Which event is triggered when a user clicks on an HTML element?",
+      ["onclick", "onhover", "onpress", "onsubmit"]
+    ],
+    [
+      "What is the default positioning property in CSS?",
+      ["static", "relative", "absolute", "fixed"]
+    ],
+    [
+      "How do you comment out multiple lines in JavaScript?",
+      ["/* This is a comment */", "// This is a comment //", "&lt;!-- This is a comment --&gt;", "# This is a comment #"]
+    ],
+    [
       "Which HTML tag is used to create a hyperlink?",
       ["&lt;a&gt;", "&lt;link&gt;", "&lt;href&gt;", "&lt;hyperlink&gt;"]
     ],
@@ -57,14 +97,8 @@ let quizData = [
   let quitGameBtn = document.getElementById("quit-game");
   let quizForm = document.getElementById("quiz-form"); //Triggers 'quit game' listener
   
-  //Fontawesome icons for depicting correct/incorrect answers within span tag.
-  let tickIcon = document.createElement("span")
-  let xIcon = document.createElement("span")
-  
   // Assign innerHTML content to element
   qCount.innerHTML = counter + " of 10";
-  tickIcon.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>`;
-  xIcon.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #e32400;"></i>`;
   
   //Set up of Functions
   
@@ -173,7 +207,7 @@ let quizData = [
   function checkAnswer(selectedOption) {
     console.log("User answer: " + selectedOption);
   //Prevents user from selecting 'next question' and 'submit' buttons after the last question is displayed.
-    if (quizData.length === 1) {
+    if (quizData.length === 11) {
       nextQButton.style.display = "none";
       playAgainBtn.style.display = "block"; // option to play game again
       submitButton.style.display = "none";
@@ -186,8 +220,6 @@ let quizData = [
         if (choices[x].checked) { // nested if condition for finding the 'checked' radio button
           let radioId = choices[x].id; // the selected radio button's id is used to identify the corresponding label tag (line 185 below)
           let theLabel = document.querySelector('label[for="' + radioId + '"]'); // 
-          theLabel.appendChild(tickIcon); // 'tick' mark displays against the respective label tag
-          console.log(theLabel.innerHTML);
           theLabel.style.border = "solid 0.5rem #90EE90";
         }
       }
@@ -195,22 +227,19 @@ let quizData = [
       keepScore(); // score is added if chosen option is correct
     }
     // Similar to above 'if' block but only runs if the selected option is incorrect
-    //if (selectedOption !== correctAnswer) {
       else{
       for (x = 0; x < choices.length; x++) {
         if (choices[x].checked) {
           let radioId = choices[x].id;
           let theLabel = document.querySelector('label[for="' + radioId + '"]');
-          theLabel.appendChild(xIcon);
-          console.log(theLabel.innerHTML);
           theLabel.style.border = "solid 0.5rem #DC143C";
         }
       }
     }
   
     //Applies to both if conditions above (within the checkAnswer function) - displays the final score after the last question has been answered and checked for correct/incorrect response.
-    if (quizData.length === 1) {
-      response.innerHTML = `Hey, ${username}! You Have Completed The Quiz!<strong> Final Score : ${score}</strong>`
+    if (quizData.length === 11) {
+      response.innerHTML = `Hey, ${username}! You Have Completed The Quiz!<strong> Final Score :<span class="em-font">${score}</span>`
       document.getElementById("q-heading").innerHTML = "Quiz complete!"; //counter heading text changes to indicate end of game.
     }
   }
@@ -220,7 +249,7 @@ let quizData = [
    */
   function keepScore() {
     score++;
-    response.innerHTML = `Your current score is : <strong>${score}</strong>`;
+    response.innerHTML = `Your current score is :<span class="em-font">${score}</span>`;
   }
   
   /**
@@ -254,7 +283,7 @@ let quizData = [
    *Stops 'submit' button from displaying and presents user with 'next question' button instead - prevents user from accidentally submitting the answer more than once.
    */
   function removeSubmitBtn() {
-    if (quizData.length === 1) {
+    if (quizData.length === 11) {
       
     } else {
       submitButton.style.display = "none";
