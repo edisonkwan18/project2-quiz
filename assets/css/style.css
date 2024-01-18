@@ -377,6 +377,9 @@ Label {
 
 /* Media query for Orientation: Landscape and greater than 680px */
 @media screen and (orientation: landscape) and (min-width: 680px) {
+body {
+    background-image: url("../images/background.png");
+}
 
 #container-div {
     background-image: url("../images/frame-ori-large-land.png");
