@@ -118,13 +118,6 @@ input[type="radio"]:checked + label {
     color:Black;
 }
 
-.selected {
-    border: 0.5rem solid #00e5ff;
-    background: #00e5ff;
-    border-radius: 10px;
-    color: black;
-  }
-
 /* Sets 'next question' and 'play again' buttons display to none by default */
 #next-q,
 #play-again,
