@@ -379,6 +379,7 @@ Label {
 @media screen and (orientation: landscape) and (min-width: 680px) {
 body {
     background-image: url("../images/background.png");
+    max-width: 100.7rem;
 }
 
 #container-div {
