@@ -221,6 +221,7 @@ let quizData = [
           let radioId = choices[x].id; // the selected radio button's id is used to identify the corresponding label tag (line 185 below)
           let theLabel = document.querySelector('label[for="' + radioId + '"]'); // 
           theLabel.style.border = "solid 0.5rem #39CF11";
+          theLabel.style.background = "#39CF11";
         }
       }
       console.log("User inputted correct answer");
@@ -233,6 +234,7 @@ let quizData = [
           let radioId = choices[x].id;
           let theLabel = document.querySelector('label[for="' + radioId + '"]');
           theLabel.style.border = "solid 0.5rem #DC143C";
+          theLabel.style.background = "#DC143C";
         }
       }
     }
@@ -316,13 +318,13 @@ let quizData = [
   
   nextQButton.addEventListener("click", removeNextQBtn); //Triggers 'remove next q button' listener after user clicks on 'next question' button
   
-  submitButton.addEventListener("click", getUserInput); // Triggers the 'user input' listener when user clicks on 'submit answer' button
+  quizForm.addEventListener("submit", getUserInput); // Triggers the 'user input' listener when user clicks on 'submit answer' button
   
-  submitButton.addEventListener("click", removeSubmitBtn); //Triggers 'remove submit button' listener after user clicks on the 'submit answer' button
+  quizForm.addEventListener("submit", removeSubmitBtn); //Triggers 'remove submit button' listener after user clicks on the 'submit answer' button
   
   playAgainBtn.addEventListener("click", playAgain);//Triggers 'play again' listener
   
   quitGameBtn.addEventListener("click", quitGame);//Triggers 'quit game' listener
   
   //The start of the game
-  gameStart(); 
+  gameStart();

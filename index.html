@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz for coding</title>
     <!-- Link to css stylesheet -->
-    <link rel="stylesheet" href="asset/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- Favicon to appear on browser tab // Quiz icon created by Freepik - Flaticon-->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="asset/favicon/apple-touch-icon.png"
+      href="assets/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="asset/favicon/favicon-32x32.png"
+      href="assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="asset/favicon/favicon-16x16.png"
+      href="assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="asset/favicon/site.webmanifest" />
 
     <!-- Imported Google Fonts -->
     <link
@@ -43,7 +42,12 @@
   <body>
     <div id="container-div">
       <h1>Ready for the challenge?</h1>
+            <!-- Displays user score -->
+            <div id="response">
+              Your current score : <span class="em-font"> 0 </span>
+            </div>
       <form id="quiz-form" action="">
+        <fieldset>
         <!-- Question counter is displayed here -->
         <h2 id="q-heading">Question: <span id="q-counter"></span></h2>
         <!-- Question is displayed here -->
@@ -53,7 +57,7 @@
         <!-- radio buttons with label tags for displaying user choices -->
         <div id="radio-btns">
           <p class="option">
-            <input id="ans1" type="radio" name="choice" required />
+            <input id="ans1" type="radio" name="choice" required/>
             <label id="a1" for="ans1"></label>
           </p>
           <p class="option">
@@ -70,33 +74,31 @@
           </p>
           <!-- Display error message if no option is selected -->
           <div id="error-message" class="error-message"></div>
+
         </div>
+        <div id="btns">
+          <button id="submit-btn" type="submit" form="quiz-form">
+            Submit Answer
+          </button>
+          <!-- button for displaying next question -->
+          <button id="next-q">Next Question</button>
+  
+          <!-- button for 'play again' option -->
+          <button id="play-again">Play Again!</button>
+  
+          <!-- button for 'quit game' option using FontAwesome 'refresh' icon -->
+          <button id="quit-game">
+            <span id="refresh"
+              ><i class="fa fa-refresh" aria-hidden="true"></i
+            ></span>
+          </button>
+        </div>
+      </fieldset>
       </form>
 
-      <div id="btns">
-        <button id="submit-btn" type="submit" form="quiz-form">
-          Submit Answer
-        </button>
-        <!-- button for displaying next question -->
-        <button id="next-q">Next Question</button>
-
-        <!-- button for 'play again' option -->
-        <button id="play-again">Play Again!</button>
-
-        <!-- button for 'quit game' option using FontAwesome 'refresh' icon -->
-        <button id="quit-game">
-          <span id="refresh"
-            ><i class="fa fa-refresh" aria-hidden="true"></i
-          ></span>
-        </button>
-      </div>
-
-      <!-- Displays user score -->
-      <div id="response">
-        Your current score : <span class="em-font"> 0 </span>
-      </div>
     </div>
+
     <!-- Script tag for linking JS file -->
-    <script src="asset/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
