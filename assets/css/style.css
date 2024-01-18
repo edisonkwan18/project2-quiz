@@ -71,7 +71,7 @@ fieldset {
 
 #question {
     font-size: 1.7rem;
-    line-height: 0rem;
+    line-height: 1.2rem;
     width: 18rem;
 }
 
@@ -113,7 +113,7 @@ label {
 
 /* Create a 'sticky' on click effect when label is clicked */
 input[type="radio"]:checked + label {
-    background-color: #00e5ff;
+    background-color: #e1ff00;
     border-radius: 10px;
     color:Black;
 }
@@ -250,6 +250,7 @@ h1 {
 
 #radio-btns {
     margin: 1ch 0;
+    min-height: 30rem;
 }
 
 Label {
@@ -386,9 +387,6 @@ Label {
 
 /* Media query for Orientation: Landscape and greater than 680px */
 @media screen and (orientation: landscape) and (min-width: 680px) {
-    body {
-    background-image: none;  
-}
 
 #container-div {
     background-image: url("../images/frame-ori-large-land.png");
@@ -403,21 +401,22 @@ Label {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     min-width: 45rem;
     width: auto;
     padding: 2rem 5rem;
     vertical-align:middle;
+    margin-bottom: auto 0;
 }
 
 #q-heading, #q-counter {
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin: 1rem;
 }
 
 #question {
-    font-size: 1.5rem;
-    line-height: 1rem;
+    font-size: 3.5rem;
+    line-height: 2.5rem;
     min-width: 38rem;
     display: inline-block;
     margin-bottom: 1rem;
@@ -427,6 +426,7 @@ h1 {
 #quiz-form {
     margin: 0 3rem 3rem 3rem;
     min-height: 30rem;
+    height: max-content;
 }
 
 #radio-btns {
@@ -434,9 +434,9 @@ h1 {
 }
 
 Label {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     width: auto;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
 }
 
 #btns {
@@ -444,11 +444,11 @@ Label {
 }
 
 #submit-btn, #next-q, #play-again, #refresh {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 #response {
-    font-size: 1rem;
+    font-size: 2.5rem;
     margin-bottom: 0;
     padding: 0 2.5rem;
     /* font-weight: 700;
@@ -462,7 +462,7 @@ Label {
 }
 
 .em-font {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 }

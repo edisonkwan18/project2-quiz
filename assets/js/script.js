@@ -220,8 +220,7 @@ let quizData = [
         if (choices[x].checked) { // nested if condition for finding the 'checked' radio button
           let radioId = choices[x].id; // the selected radio button's id is used to identify the corresponding label tag (line 185 below)
           let theLabel = document.querySelector('label[for="' + radioId + '"]'); // 
-          theLabel.style.border = "solid 0.5rem #39CF11";
-          theLabel.style.background = "#39CF11";
+          theLabel.style.border = "solid 1.5rem #39CF11";
         }
       }
       console.log("User inputted correct answer");
@@ -233,8 +232,7 @@ let quizData = [
         if (choices[x].checked) {
           let radioId = choices[x].id;
           let theLabel = document.querySelector('label[for="' + radioId + '"]');
-          theLabel.style.border = "solid 0.5rem #DC143C";
-          theLabel.style.background = "#DC143C";
+          theLabel.style.border = "solid 1.5rem #DC143C";
         }
       }
     }
