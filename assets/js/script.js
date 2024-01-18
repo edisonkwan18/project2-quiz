@@ -241,6 +241,7 @@ let quizData = [
     if (quizData.length === 11) {
       response.innerHTML = `Congratulations, ${username}! Your Final Score is <span class="em-font">${score}</span>`
       document.getElementById("q-heading").innerHTML = "Quiz complete!"; //counter heading text changes to indicate end of game.
+      response.style.color = "red";
     }
   }
   
