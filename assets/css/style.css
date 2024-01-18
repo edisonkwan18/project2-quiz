@@ -9,6 +9,7 @@
     font-family: 'Pixelify Sans', 'VT323', sans-serif;
 }
 
+/* Make the container-div to be center */
 body {
     display:flex;
     justify-content: center;
@@ -37,6 +38,7 @@ h1 {
     padding: 1.5rem;
 }
 
+/* The style of the score */
 .em-font {
     font-size: 2rem;
     font-weight: 700;
@@ -56,10 +58,12 @@ h1 {
 
 }
 
+/* Remove the surrounding line of fieldset */
 fieldset {
     border: 0;
 }
 
+/* Style of question counter */
 #q-heading, #q-counter {
     margin: 1rem 0;
     font-size: 2.5rem;
@@ -69,11 +73,13 @@ fieldset {
     margin-bottom: 1.5rem;
 }
 
+/* Style of statement of question */
 #question {
     font-size: 1.7rem;
     line-height: 1.2rem;
     width: 18rem;
 }
+
 
 #quiz-form {
     background:rgba(255,255,255,0.8);
@@ -85,10 +91,6 @@ fieldset {
     display: flex;
 }
 
-.fa-solid {
-    margin-left: 10px;
-}
-
 
 /* Hiding the circle of radio buttons */
 input {
@@ -97,6 +99,7 @@ input {
     pointer-events: none;
 }
 
+/* style of labels (choices) */
 label {
     padding: 0.5rem;
     cursor: pointer;
@@ -118,18 +121,19 @@ input[type="radio"]:checked + label {
     color:Black;
 }
 
-/* Sets 'next question' and 'play again' buttons display to none by default */
+/* Sets 'next question', 'quit game' and 'play again' buttons display to the most front */
 #next-q,
 #play-again,
 #quit-game{
     z-index: 999;
 }
 
-
+/* Sets 'next question', and 'play again' buttons display to disappear */
 #next-q, #play-again{
     display:none;
 }
 
+/* Style when mouse hover on */
 #play-again:hover {
     background-color: black;
     color: white;
@@ -140,6 +144,7 @@ input[type="radio"]:checked + label {
     color: white;
 }
 
+/* style of button (submit, next, play again, quit) */
 #btns {
     display: flex;
     flex-direction: row;
@@ -171,6 +176,7 @@ input[type="radio"]:checked + label {
     color: white;
 }
 
+/* Style of score area */
 #response {
     font-size: 1.5rem;
     font-weight: 700;
@@ -269,14 +275,6 @@ Label {
 
 #response {
     font-size: 3rem;
-    /* font-weight: 700;
-    z-index:1;
-    padding: 1.5rem;
-    background-color: rgba(252, 252, 252, 0.8);
-    min-width: 24rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
-    margin-bottom: 1rem; */
 }
 
 .em-font {
@@ -328,7 +326,6 @@ h1 {
     line-height: 1rem;
     width: 55rem;
     display: inline-block;
-    /* margin-bottom: 5rem; */
 }
 
 /* Making the grey transparent screen bigger */
@@ -368,13 +365,6 @@ Label {
     font-size: 1.2rem;
     padding: 0 1.5rem;
     margin-bottom: 0.2rem;
-    /* font-weight: 700;
-    z-index:1;
-    background-color: rgba(252, 252, 252, 0.8);
-    min-width: 24rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
-    margin-bottom: 1rem; */
 }
 
 .em-font {
@@ -451,14 +441,6 @@ Label {
     font-size: 2.5rem;
     margin-bottom: 0;
     padding: 0 2.5rem;
-    /* font-weight: 700;
-    z-index:1;
-    
-    background-color: rgba(252, 252, 252, 0.8);
-    min-width: 24rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
- */
 }
 
 .em-font {
