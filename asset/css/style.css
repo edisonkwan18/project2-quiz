@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0 ;
     margin:0 ;
+
     /* Making font size to 1rem = 10px when font size is 62.5% */
     font-size: 62.5%;
     font-family: 'Pixelify Sans', 'VT323', sans-serif;
@@ -14,8 +15,9 @@ body {
     align-items: center;
     height: 100vh;
     color: black;
-    background-image: url(asset/images/frame-ori-land-small-429x925.png);
+    background-image: url(/asset/images/frame-ori-land-small.png);
     background-size: contain;
+    background-color: #D80519;
     max-width: 100%;
     text-align: center;
     object-fit: cover;
@@ -33,7 +35,7 @@ h1 {
     width: 24rem;
     margin-bottom: 1rem;
     display: block;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .em-font {
@@ -45,17 +47,13 @@ h1 {
     padding: 20px;
     display:flex;
     flex-direction: column;
-    /* background-image: url(asset/images/frame-ori-land-large.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center; */
     justify-content: center;
     align-items: center;
     text-align: center;
     max-width: 550px;
     max-height: 1080px;
-    height:100%;
-    width:100%;
+    height:80%;
+    width:80%;
 
 }
 
@@ -206,11 +204,12 @@ input[type="radio"]:checked + label {
 /* Removes the 'quiz' background 'wallpaper' for screens sizes below 768px */
 @media screen and (min-width: 768px) {
     body {
-    background-image: url(asset/images/background-50.png);
+    background-image: url(/asset/images/background.png);
+    background-color: #D80519;
 }
 
 #container-div {
-    background-image: url(asset/images/frame-ori-768x1024-new.png);
+    background-image: url(/asset/images/frame-ori-large.png);
     background-color: white;
     max-width: 768px;
     max-height: 1047px;
@@ -262,7 +261,5 @@ Label {
 #submit-btn, #next-q, #play-again, #refresh {
     font-size: 3rem;
 }
-
-
 
 }
