@@ -14,7 +14,7 @@ body {
     align-items: center;
     height: 100vh;
     color: black;
-    background-image: url(/asset/images/frame-ori-land-small-429x925.png);
+    background-image: url(asset/images/frame-ori-land-small-429x925.png);
     background-size: contain;
     max-width: 100%;
     text-align: center;
@@ -45,7 +45,7 @@ h1 {
     padding: 20px;
     display:flex;
     flex-direction: column;
-    /* background-image: url(/asset/images/frame-ori-land-large.png);
+    /* background-image: url(asset/images/frame-ori-land-large.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center; */
@@ -206,11 +206,11 @@ input[type="radio"]:checked + label {
 /* Removes the 'quiz' background 'wallpaper' for screens sizes below 768px */
 @media screen and (min-width: 768px) {
     body {
-    background-image: url(/asset/images/background-50.png);
+    background-image: url(asset/images/background-50.png);
 }
 
 #container-div {
-    background-image: url(/asset/images/frame-ori-768x1024-new.png);
+    background-image: url(asset/images/frame-ori-768x1024-new.png);
     background-color: white;
     max-width: 768px;
     max-height: 1047px;
