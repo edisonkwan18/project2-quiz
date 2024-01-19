@@ -84,7 +84,7 @@ let quizData = [
   ];
   
   // Setup global variables
-  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username;
+  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username, isWrong;
   let counter = 1;
   let score = 0;
   
@@ -239,7 +239,7 @@ let quizData = [
   
     //Applies to both if conditions above (within the checkAnswer function) - displays the final score after the last question has been answered and checked for correct/incorrect response.
     if (quizData.length === 11) {
-      response.innerHTML = `Congratulations, ${username}! Your Final Score is <span class="em-font">${score}</span>`
+      response.innerHTML = `Congratulations, ${username}! <span class="em-font">Your Final Score is &emsp; ${score} </span>`
       document.getElementById("q-heading").innerHTML = "Quiz complete!"; //counter heading text changes to indicate end of game.
       response.style.color = "red";
     }
@@ -250,7 +250,7 @@ let quizData = [
    */
   function keepScore() {
     score++;
-    response.innerHTML = `Current score:<span class="em-font">${score}</span>`;
+    response.innerHTML = `Current score:  <span class="em-font">&emsp; ${score}</span>`;
   }
   
   /**

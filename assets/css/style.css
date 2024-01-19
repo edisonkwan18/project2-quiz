@@ -33,7 +33,7 @@ h1 {
     text-transform: capitalize;
     min-height: 7rem;
     width: 24rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     display: block;
     padding: 1.5rem;
 }
@@ -156,9 +156,9 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     align-items:center;
     justify-content: space-around;
-    padding:2rem;
+    padding:0 2rem;
     height:20rem;
-    margin: 2rem 0;
+    margin: 1rem 0 0 0;
 }
 
 #submit-btn, #next-q, #play-again {
@@ -181,7 +181,7 @@ input[type="radio"]:checked + label {
     font-size: 1.5rem;
     font-weight: 700;
     z-index:1;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     background-color: rgba(252, 252, 252, 0.8);
     min-width: 24rem;
     border-radius: 1rem;
@@ -447,7 +447,8 @@ Label {
 }
 
 .em-font {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #FFA500;
 }
 
 }
