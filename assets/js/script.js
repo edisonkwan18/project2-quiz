@@ -84,7 +84,7 @@ let quizData = [
   ];
   
   // Setup global variables
-  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username, isWrong;
+  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username;
   let counter = 1;
   let score = 0;
   
@@ -117,9 +117,7 @@ let quizData = [
     question = document.getElementById("question");
     i = Math.floor(Math.random() * quizData.length);
     question.innerHTML = quizData[i][0];
-    console.log(question.innerHTML);
     correctAnswer = quizData[i][1][0]; // Correct answer is stored here before it is randomised
-    console.log(`Correct option is : ${correctAnswer}`); //
 
     displayChoice(); // callback function for displaying choices.
   }

@@ -1,10 +1,10 @@
 # Coding Challenge
 ## Welcome to Coding Challenge
-NicoNail is not just an online shop; it's a dynamic community committed to empowering individuals on their expressive journey through captivating nail art. Our platform strives to be the go-to haven for nail enthusiasts, providing a diverse selection of press-on nails that not only enhance your style but also mirror your distinctive personality.
+Coding Challenge is a simple quiz about knowledge of basic HTML, CSS and Javascript. It contains 20 questions and the quiz will shows 10 questions randomly.g
 
 Live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/project2-quiz/)
 
-![Coding Challenge Am I Responsive Image](asset/document/responsive.png)
+![Coding Challenge Am I Responsive Image](assets/document/responsive.png)
 
 ### Am I Responsive ?
 [Image Source - Am I Responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/project2-quiz/)
@@ -12,35 +12,22 @@ Live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/
 ## Site Owner Goals
 ### Our Unique Offerings:
 
-- Personalized Style Choices: Tailor your press-on nail selections daily, effortlessly complementing your outfits for a truly personalized touch.
-- Safe for All Ages: NicoNail's press-on nails are gentle, safe, and suitable for all, including pregnant women and children, ensuring a worry-free nail enhancement solution.
-- Cost-Effective Versatility: NicoNail offers a budget-friendly alternative with versatile uses, encouraging financial savings without compromising on style.
-- Seamless Experience: Bid farewell to the awkward waiting period for natural nails to grow. NicoNail ensures a seamless experience with easy-to-apply press-on nails.
-Embrace individuality, celebrate creativity, and redefine your nail art journey with NicoNail, where your nails tell your one-of-a-kind story.
-
-## User Stories/Goals
-### Target Audience 
-My target customer base is diverse, encompassing individuals of all ages and genders. We offer customized styles to meet specific preferences, tailoring unique nail designs for you. With the non-toxic and safe nature of press-on nails, they can be easily removed at any time, even making them suitable for use by pregnant women and children.
+- Site owner would like to let user to learn or assess the knowledge of basic HTML, CSS and Javascript by playing a quiz game.
 
 ## Features
 
 The existing features provide the following project requirements:
 
-### Project Name
+### Enter user name
 
-<img src="asset/document/project-name.png">
+<img src="assets/document/input-username.png">
 
-The project name is displayed consistently at the top of all pages.
+User can enter their username in here.
+It will display the name when the game is completed.
 
-### Footer
+### Welcome statement for user
 
-<img src="asset/document/footer.png">
-
-The footer is displayed at the bottom of all pages. It has been styled at the bottom. All footer links open in a blank new tab
-
-The footer includes:
-- Photos and links of social media: Facebook, X, Youtube, Instagram
-- Copyright statement
+<img src="assets/document/welcome.png">
 
 ### Favicon and page titles
 
