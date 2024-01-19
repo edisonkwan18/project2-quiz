@@ -6,11 +6,11 @@ Live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/
 
 ![Coding Challenge Am I Responsive Image](assets/document/responsive.png)
 
-### Am I Responsive ?
+### <u>Am I Responsive ?</u>
 [Image Source - Am I Responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/project2-quiz/)
 
 ## Site Owner Goals
-### Our Unique Offerings:
+### <u>Our Unique Offerings:</u>
 
 - Site owner would like to let user to learn or assess the knowledge of basic HTML, CSS and Javascript by playing a quiz game.
 
@@ -18,133 +18,125 @@ Live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/
 
 The existing features provide the following project requirements:
 
-### Enter user name
+### <u>Enter user name</u>
 
 <img src="assets/document/input-username.png">
 
 User can enter their username in here.
 It will display the name when the game is completed.
 
-### Welcome statement for user
+### <u>Favicon and page titles</u>
+
+<img src="assets/document/favicon.png">
+
+A favicon has been included and each page has a title of my app name \"Coding Challenge\".
+
+### <u>Welcome statement for user</u>
 
 <img src="assets/document/welcome.png">
 
-### Favicon and page titles
+### <u>Response section (score)</u>
+- Response section will interact with user by showing them the current score and inform the user when the game is completed
 
-<img src="asset/document/favicon.png">
+#### <u>Response section : Before</u>
 
-A favicon has been included and each page has a title of my app name \"Niconail\".
+![Response before Image](assets/document/responsive-before.png)
 
-### Navigation bar (Navbar)
-- A pink circle with black "=" sign in the middle as a toggle to switch on.
-- Logo of Niconail on the right.
+#### <u>Response section : After</u>
 
-**There are another version after toggle is on.**
+**After the game is completed, a statement of "Congratulations, [username] ! Your Final Score is [score]".**
 
-#### Navigation bar : Before
+![Response after Image](assets/document/responsive-after.png)
 
-![Navigation bar Image](asset/document/navbar-before.png)
+### <u>Question Counter</u>
 
-#### Navigation bar : After
+<img src="assets/document/q-counter.png">
 
-**After the toggle is on, the pink circle will be extend. A Navbar appeared with 3 tags: Home, Working Instruction and Product.**
+It will shows the number of question from "Question: 1 of 10" to "Question: 1 of 10"
 
-![Navigation bar Image](asset/document/navbar-after-v1.png)
+### <u>Question section</u>
 
-### Fixed Icon
+<img src="assets/document/question.png">
+It is the statement of question
 
-Two fixed icon will be "stick" at bottom right hand corner on every page.
-- A "House" sign will be redirected to the index.html
-- A "Envelope" sign will be redirected to the index.html
+### <u>Choice</u>
 
-![Fixed Icon](asset/document/fixed_icon.png)
+<img src="assets/document/choice.png">
+There are 4 choices for user to answer
 
-### The landing page image
+### <u>Buttons</u>
+#### <u>Submit Answer</u>
+<img src="assets/document/submit-btn.png">
 
-- The landing page includes a animation slide as a call to action.
-- User can click on the image and redirect to other pages.
-- There are 4 circle in the middle of bottom. User can click on it to select the image they want
+Submit answer button is able to click after user has selected the choice of answer.
+The selected choice will be determinate is that correct answer or not.
 
-![Landing Page Image 1](asset/document/hero-slide-1.png)
+#### <u>Next Question</u>
+<img src="assets/document/next-q-btn.png">
 
-![Landing Page Image 2](asset/document/hero-slide-2.png)
+Next Question button will appear after 'Submit answer button' clicked.
+The gaming page will be transferred to next question after this button clicked
 
-![Landing Page Image 3](asset/document/hero-slide-3.png)
+#### <u>Play Again</u>
+<img src="assets/document/play-again-btn.png">
 
-![Landing Page Image 4](asset/document/hero-slide-4.png)
+When the game is completed, this button will appear.
+The entire game will be restarted when the button is clicked.
+The game will go as a hard refresh.
 
-### Product promotion
+### <u>Quit game button</u>
+<img src="assets/document/quit-game-btn.png">
 
-- A part of hot selling items will appear
-- User can select the size and click "ADD TO CART" button
+This button will appear for the entire game before the game is complete.
+It can use for restart the game.
+The entire game will be restarted when the button is clicked.
+The game will go as a hard refresh.
 
-![Hot selling item](asset/document/hot-item.png)
+## Screen shot of the page
+### <u>The landing page image</u>
+<img src="assets/document/start-game.png">
 
-**When user put the cursor hover on the size, the color will turn into red**
+- The landing page includes following features:
+- Welcome statement to welcome the user
+- Response section to interact with the user
+- Question counter to show the current question
+- Question section to show the question
+- Choices to let user select the option to answer the question
+- Buttons to move forward such as "Submit" , "Next Question" & "Play Again"
+- A button to quit in order to jump out current circus
 
-![Cursor hover](asset/document/hot-item-hover.png)
+### <u>Selecting choice</u>
+<img src="assets/document/start-game-checked.png">
 
-**After clicked on "ADD TO CART" button, an alert will appear in order to notice the user**
+When user want to select a choice, the background colour of choice will be yellow after it is clicked.
 
-![Cursor hover](asset/document/cart-alert.png)
+### <u>Submit when no choice is selected</u>
+<img src="assets/document/submit-null.png">
 
-### Video Function
+There is an alert to warn the user when user click the submit answer button with no choice selected.
+It will not go to check the answer if no choice selected.
 
-Video of wearing instruction will encourage user to watch when they are not willing to reading the instruction next to it.
+### <u>Checking answer</u>
+#### <u>When answer is correct</u>
+<img src="assets/document/Check-correct.png">
 
-![Video](asset/document/video.png)
+When user answer the question correctly, the selected choice will turn the colour of border from orange to green.
 
-### Contact us form
+#### <u>When answer is incorrect</u>
+<img src="assets/document/check-wrong.png">
 
-User can ask us and tell us what they want by submitting the contact us form. 
+When user answer the question incorrectly, the selected choice will turn the colour of border from orange to red.
 
-![Contact us form](asset/document/contact-us-form.png)
+### <u> Complete the game </u>
+<img src="assets/document/complete-game.png">
 
-## Screen shot of the pages
-### Landing page (index.html)
+When the user complete the game, a statement will appear and inform the user the game is completed and the score they got.
 
-<img src="asset/document/index.png">
+<img src="assets/document/responsive-after.png">
 
-The Landing page includes:
-- 4 Landing page images to guide user to different pages
-- 4 Static images of hot selling item
-- 4 product information
-- Button "ADD TO CART"
+After the game is completed, a statement of "Congratulations, [username] ! Your Final Score is [score]".
 
-### Wearing Instruction page (instruction.html)
-
-<img src="asset/document/instruction.png">
-
-The Landing page includes:
-- Static images of nail polish shelf
-- A text "Wearing Instruction" represent the page located
-- A video of wearing instruction
-- A statement of wearing instruction in step-by-step
-- Static images of nail size measurement guide
-
-### Contact us page (contact.html)
-
-<img src="asset/document/contact.png">
-
-The Landing page includes:
-- Static images of "WE HEAR YOU" at the background
-- A title of "Let's talk to us" with a white "Plane" sign on the left
-- 3 input text field with First name, Last Name
-- User can only select one of the type of comment: General Enquiry or Complain
-- Static images of nail size measurement guide
-- A text field for user to share their thought
-- A button "Let's tell us!" to submit the form
-
-**It is the result after submission of the form**
-
-<img src="asset/document/contact-result.png">
-
-### Product page (product.html)
-**It is under development. Coming soon**
-
-<img src="asset/document/product.png">
-
-## Future Feature
+## Future Potential Feature
 - Develop the product page
 - Setting up the purchase process by using javascript and adding shopping cart function
 - Upgrade the framework using Bootstrap (Maybe)
@@ -163,7 +155,7 @@ During the development phase, we leveraged a comprehensive stack of technologies
 - W3C Markup Validation Service - Testing HTML [W3C Markup Validation Service](https://validator.w3.org)
 - Am I responsive - For responsive checking [Am I responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/Project1/)
 - Uizard - Design for wireframe [Uizard](https://app.uizard.io/)
-- Huemint - Color scheme suggestion [Huemint](https://huemint.com/)
+- Huemint - colour scheme suggestion [Huemint](https://huemint.com/)
 - Upscale - upscale and enhance image [Upscale](https://www.upscale.media/)
 - Lighthouse testing - Testing
 - Responsive test tool - Testing responsive with showing resolution [Responsive test tool](https://responsivetesttool.com/) 
