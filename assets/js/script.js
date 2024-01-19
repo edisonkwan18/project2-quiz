@@ -84,7 +84,7 @@ let quizData = [
   ];
   
   // Setup global variables
-  let question, i, userChoice, choices, y, choiceLabel, correctAnswer, username;
+  let question, i, userChoice, choices, y, correctAnswer, username;
   let counter = 1;
   let score = 0;
   
