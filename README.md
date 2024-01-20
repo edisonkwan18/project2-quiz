@@ -137,9 +137,10 @@ When the user complete the game, a statement will appear and inform the user the
 After the game is completed, a statement of "Congratulations, [username] ! Your Final Score is [score]".
 
 ## Future Potential Feature
-- Develop the product page
-- Setting up the purchase process by using javascript and adding shopping cart function
-- Upgrade the framework using Bootstrap (Maybe)
+- Showing the correct answer if user answer incorrectly 
+- Adding more question to question database
+- Set a timer to record the time of user finishing the game
+- Bulid a leaderboard to record the score and time of user
 
 ## Languages
 
@@ -147,16 +148,15 @@ During the development phase, we leveraged a comprehensive stack of technologies
 
 **CSS** played a crucial role in enhancing the visual appeal and user experience of our platform. With CSS, we applied styles, customized layouts, and ensured a consistent design language throughout the application, providing an engaging interface for our users.
 
+**Javascript** is the main core of the game. It provide interaction between user and the program. It will follow the logic to giving out feedback based on the input of the user.
+
 ### Frameworks/Libraries/Tools:
 
 - Google Font - It provide more fonts to use [Google Font](https://fonts.google.com/)
 - Fontawesome - It provide more icons [Fontawesome](https://fontawesome.com)
 - W3C CSS Validation Service - Testing CSS [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
 - W3C Markup Validation Service - Testing HTML [W3C Markup Validation Service](https://validator.w3.org)
-- Am I responsive - For responsive checking [Am I responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/Project1/)
-- Uizard - Design for wireframe [Uizard](https://app.uizard.io/)
-- Huemint - colour scheme suggestion [Huemint](https://huemint.com/)
-- Upscale - upscale and enhance image [Upscale](https://www.upscale.media/)
+- Am I responsive - For responsive checking [Am I responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/project2-quiz/)
 - Lighthouse testing - Testing
 - Responsive test tool - Testing responsive with showing resolution [Responsive test tool](https://responsivetesttool.com/) 
 
@@ -169,112 +169,78 @@ During the development phase, we leveraged a comprehensive stack of technologies
 [Visual Studio Code](https://code.visualstudio.com/) - The editor in which this project was built. 
 
 ## Testing and Validation
-### Responsiveness testing
-### Landing page (index.html)
+### <u>Responsiveness testing</u>
+### <u>Landing page (index.html)</u>
 
-<img src="asset/document/re-fullhd.png">
+<img src="assets/document/respon-test.png">
 
 **Credit:** [Responsive test tool](https://responsivetesttool.com/)
 
-<img src="asset/document/responsive.png">
+<img src="assets/document/responsive.png">
 
-[Image Source - Am I Responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/Project1)
+[Image Source - Am I Responsive](https://ui.dev/amiresponsive?url=https://edisonkwan18.github.io/project2-quiz/)
 
-### HTML testing
+### <u>HTML testing </u>
 
 This is pass by using W3C Markup Validation Service. 
 
-<img src="asset/document/html-index.png">
+<img src="assets/document/w3c.png">
 
 [W3C Markup Validation Service](https://validator.w3.org/)
 
-### CSS testing
+### <u> CSS testing </u>
 
 This is pass by using W3C CSS Validation Service. 
 
-<img src="asset/document/css-validator.png">
+<img src="assets/document/css-valid.png">
 
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
-### Accessibility
+### <u> Javascript testing </u>
+
+This is pass by using JSHint.
+
+<img src="assets/document/jshint.png">
+
+[JSHint](https://jshint.com/)
+
+
+### <u> Accessibility </u>
 The site achieved a Lighthouse (Chrome Dev tools) accessibility score of 90% which confirms that the colours and fonts chosen are easy to read and accessible
 
-<img src="asset/document/lighthouse.png">
+<img src="assets/document/lighthouse.png">
 
-### Links Testing
-- All navigation links tested thoroughly to ensure the user is directed to the correct section of the website at the appropriate 'anchor point'
-- Social Media links in the page footer were tested manually to ensure there were no broken links and that they direct the user to the correct page.
-- Also ensured appropriate usage of ARIA attributes and that external links opened in a new tab.
 
-### Browser Testing
+### <u> Browser Testing </u>
 - The Webpage was tested on Google Chrome, Safari and Microsoft Edge web browsers with no issues observed.
 
 ## Solved Bugs
 
-### Landing page image silde responsive problem
+### <u> Error in the console when input (display:none) </u>
+When I hide the circle of radio button, error will appear if user select one of the choice and submit it.
 
-- To make the images float to left. I need to calculate to exactly width of the image then the next image can push the current image to the left.
-- I have the problem on responsive because I need make width change during responsive
-- I use ```calc(0 * 100vw)``` and it works
+The error stated that 'An invalid form control with name='choice' is not focusable'
 
+<img src="assets/document/radio-prob.png">
 
-``` @keyframes move { ```
+I have found out that I have used required to make sure user must select one of the choice but the display of radio button is hidden by (display:none). Therefore, the browser could not able to focus the input radio button.
 
-```  0% {transform: translate(calc(0 * 100vw));} ```
+With the help of my classmate Kunal, the solution is shown as below:
 
-```  25% {transform: translate(calc(-1 * 100vw));} ```
+<img src="assets/document/radio-solve.png">
 
-```  50% {transform: translate(calc(-2 * 100vw));} ```
-
-```  75% {transform: translate(calc(-3 * 100vw));} ```
-
-```  100% {transform: translate(calc(-4 * 100vw));} ```
-
-``` } ```
-
-/* The setting of the image */
-
-``` .item {  ```
-
-``` 	width: 100vw;  ```
-
-``` 	min-width: var(--min-width);  ```
-
-``` 	float: left;  ```
-
-``` }  ```
-
-``` .item > img { ```
-
-``` aspect-ratio: 1 / 1; ```
-
-``` object-fit: fill; ```
-
-``` 	object-position: center; ```
-
-``` } ```
+<u> Explain </u>
+- opacity:0; -> It makes the radio button invisible
+- pointer-events: none; -> It makes pointer not clicking on the radio button actually
+- position: fixed -> It will stick with the label of radio button
 
 ## Known bugs
 
-No Known bugs
+When user is entering the username, the username will be "null" if they "enter nothing" , "click cancel" or "press esc button on the keyboard"
 
 ## Version Control
 ### Creating branch
-- I will create issues using the github repo page.
-- Inside the issue, I can write about the topic name and description (if necessary). I need to assign myself and create a new branch with the issue.
-![Example of issue](asset/document/git-example.png)
-- Once the issue and new branch are created, we can work on it with any commit and push (it will not affect the main branch) [**It will not show anything changed on the deployed site as you have not affected to the main branch**]
-
-### Merge to the main branch
-- After confirming the code is correct, I will go to the code section on the github page.
-- Github will give me an alert to create a pull request.
-- After I have merge the pull request, the issue will be closed.
-
-**List of closed issue**
-![Example of closed issue](asset/document/git-issue.png)
-
-**List of pull request**
-![Example of pull request](asset/document/git-example-2.png)
+- I will commit and push to github. If something really go wrong then I can do git reset -hard in order to travel back to that commit.
 
 ## Deployment
 
@@ -287,35 +253,27 @@ The project was deployed using GitHub Pages. The steps to deploy using GitHub Pa
 5. Once selected, click the 'Save' button.
 6. Deployment should be confirmed by a message on a green background saying "Your site is published at" followed by the web address.
 
-The live link can be found here - [Niconail](https://edisonkwan18.github.io/Project1/index.html)
+The live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/project2-quiz/)
 
 ## Credit
-### image
+### <u> image </u>
 | Name     |Link            | Where or why used | Author |
 | -------- | ---------- | --------------------- | ------ |
-|ideogram|[https://ideogram.ai/api/images/direct/hxZLqAuwTz2WGe63Dv5dxw.jpg](https://ideogram.ai/api/images/direct/hxZLqAuwTz2WGe63Dv5dxw.jpg)|image for header|Unknown|
-|Unsplash|[https://unsplash.com/photos/woman-in-white-lace-dress-wearing-gold-ring-LgSmuOnpYXg](https://unsplash.com/photos/woman-in-white-lace-dress-wearing-gold-ring-LgSmuOnpYXg)|hero image for wearing instruction|Febrian Zakaria|
-|Unsplash|[https://unsplash.com/photos/black-and-white-printed-textile-vVSleEYPSGY](https://unsplash.com/photos/black-and-white-printed-textile-vVSleEYPSGY)|Background photo for contact us|Jon Tyson|
-|Unsplash|[https://unsplash.com/photos/person-wearing-silver-ring-with-black-manicure-KZKbGgQPCtU](https://unsplash.com/photos/person-wearing-silver-ring-with-black-manicure-KZKbGgQPCtU)|hero image for best-seller|Bryony Elena|
-|Pexels|[https://www.pexels.com/photo/a-variety-of-nail-polish-arranged-on-wall-shelves-7690982/](https://www.pexels.com/photo/a-variety-of-nail-polish-arranged-on-wall-shelves-7690982/)|background for wearing instruction|Henry & Co.|
-|Unsplash|[https://unsplash.com/photos/person-wearing-gold-ring-and-gold-ring-cdBZTWcTvH8]( https://unsplash.com/photos/person-wearing-gold-ring-and-gold-ring-cdBZTWcTvH8)|hero image for new arrivals|Nick Karvounis|
-|Unsplash|[https://unsplash.com/photos/person-wearing-gold-ring-and-gold-ring-cdBZTWcTvH8]( https://unsplash.com/photos/person-wearing-gold-ring-and-gold-ring-cdBZTWcTvH8)|hero image for new arrivals|Nick Karvounis|
-|Adobe firefly|[https://firefly.adobe.com/public/t2i?id=urn%3Aaaid%3Asc%3AAP%3A71908a82-5680-4f6b-824d-1505083992cf&ff_channel=shared_link&ff_source=Text2Image]( https://firefly.adobe.com/public/t2i?id=urn%3Aaaid%3Asc%3AAP%3A71908a82-5680-4f6b-824d-1505083992cf&ff_channel=shared_link&ff_source=Text2Image)| Background photo for coming soon|Unknown|
-|Instagram|[https://www.instagram.com/p/CpAazK4PBb1](https://www.instagram.com/p/CpAazK4PBb1)|Alien nail|snail_nail.snail|
-|Instagram|[https://www.instagram.com/p/CliUHVTPnmY/](https://www.instagram.com/p/CliUHVTPnmY/)|Cherry nail|snail_nail.snail|
-|Instagram|[https://www.instagram.com/p/Co6_-TlPXdX/](https://www.instagram.com/p/Co6_-TlPXdX/)|Hellokitty nail|snail_nail.snail|
-|Instagram|[https://www.instagram.com/p/CvRvJvaPkZN/](https://www.instagram.com/p/CvRvJvaPkZN/)|Customise nail|snail_nail.snail|
+|flaticon|[https://www.flaticon.com/free-icon/quiz_10292284?term=quiz&related_id=10292284](https://www.flaticon.com/free-icon/quiz_10292284?term=quiz&related_id=10292284)|Favicon|Unknown|
+|pngtree|[https://pngtree.com/freepng/lego-puzzle-border_5411181.html?share=3](https://pngtree.com/freepng/lego-puzzle-border_5411181.html?share=3)|Frame of app|588ku|
+|Unsplash|[https://unsplash.com/photos/captcha-cvBBO4PzWPg](https://unsplash.com/photos/captcha-cvBBO4PzWPg)|Markus Spiske|
 
-### Guidance or source
+### <u> Guidance or source </u>
 |Author/Website|Link or source|Where or why used|
 |-------------|----|---------|
-|bilibili-ayang|[https://space.bilibili.com/478490349](https://space.bilibili.com/478490349)|Navbar|
-|Code institute|Love running project|Footer|
-|Runoob|[https://www.runoob.com/css3/css3-buttons.html](https://www.runoob.com/css3/css3-buttons.html)|Button animation|
-|bilibili-ayang|[https://space.bilibili.com/478490349](https://space.bilibili.com/478490349)|Hero slide|
-|Binbinbiji|[https://www.binbinbiji.com/css/3091.html](https://www.binbinbiji.com/css/3091.html)|iframe|
-|Oxxostudio|[https://steam.oxxostudio.tw/category/html/example/window-alert.html](https://steam.oxxostudio.tw/category/html/example/window-alert.html)|Alert|
-|wayou|[https://wayou.github.io/2019/12/14/CSS-background-%E7%9A%84%E7%AE%80%E5%86%99/](https://wayou.github.io/2019/12/14/CSS-background-%E7%9A%84%E7%AE%80%E5%86%99/)|Background shorthand|
-|Knowledge Base|[https://www.youtube.com/watch?v=JjGmY64kCmY](https://www.youtube.com/watch?v=JjGmY64kCmY)|video disable auto-play|
-|kun-shukla|[https://github.com/kun-shukla/ci-p1-mind-flora/blob/main/README.md](https://github.com/kun-shukla/ci-p1-mind-flora/blob/main/README.md)|Readme.md|
-|bytesbyt|[https://github.com/bytesbyt/econte/blob/main/README.md](https://github.com/bytesbyt/econte/blob/main/README.md)https://github.com/bytesbyt/econte/blob/main/README.md|Readme.md|
+|Mike Bostock/Fisher–Yates Shuffle|[https://bost.ocks.org/mike/shuffle/](https://bost.ocks.org/mike/shuffle/)|Shuffle choice in Javascript|
+
+### <u> Acknowledgments / Credits </u>
+Thank you very much to my course tutor [Komal Karir](https://github.com/kkarir-waes) and my classmate and collaborator [Kunal](https://github.com/kun-shukla).
+
+Mr.Komal Karir gave us the idea and steps logic how the Javascript should work. Also, he gave us a very big help on review the code and looking for bugs.
+
+My Collaborator Kunal contributed a lot of setup the framework of the quiz and Javascript coding. He is doing very great especially on debugging the Javascript.
+
+I would like to say thank you again for your contribution to this project.
+
