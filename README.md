@@ -1,6 +1,6 @@
 # Coding Challenge
 ## Welcome to Coding Challenge
-Coding Challenge is a simple quiz about knowledge of basic HTML, CSS and Javascript. It contains 20 questions and the quiz will shows 10 questions randomly.g
+Coding Challenge is a simple quiz about knowledge of basic HTML, CSS and Javascript. It contains 20 questions and the quiz will shows 10 questions randomly.
 
 Live link can be found here - [Coding Challenge](https://edisonkwan18.github.io/project2-quiz/)
 
@@ -261,7 +261,7 @@ The live link can be found here - [Coding Challenge](https://edisonkwan18.github
 | -------- | ---------- | --------------------- | ------ |
 |flaticon|[https://www.flaticon.com/free-icon/quiz_10292284?term=quiz&related_id=10292284](https://www.flaticon.com/free-icon/quiz_10292284?term=quiz&related_id=10292284)|Favicon|Unknown|
 |pngtree|[https://pngtree.com/freepng/lego-puzzle-border_5411181.html?share=3](https://pngtree.com/freepng/lego-puzzle-border_5411181.html?share=3)|Frame of app|588ku|
-|Unsplash|[https://unsplash.com/photos/captcha-cvBBO4PzWPg](https://unsplash.com/photos/captcha-cvBBO4PzWPg)|Markus Spiske|
+|Unsplash|[https://unsplash.com/photos/captcha-cvBBO4PzWPg](https://unsplash.com/photos/captcha-cvBBO4PzWPg)|Background image|Markus Spiske
 
 ### <u> Guidance or source </u>
 |Author/Website|Link or source|Where or why used|
